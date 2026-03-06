@@ -1,0 +1,310 @@
+openapi: 3.0.3
+info:
+  title: Inventory Forecast API
+  version: "1.0.0"
+  description: |
+    Forecasting, anomaly detection, and history endpoints with session auth.
+servers:
+  - url: http://localhost:5000
+    description: Local server
+tags:
+  - name: Auth
+  - name: Health
+  - name: Forecasting
+  - name: Anomaly
+  - name: History (Admin)
+paths:
+  /:
+    get:
+      tags: [Health]
+      summary: Root
+      responses:
+        "200":
+          description: OK (plain text)
+          content:
+            text/plain:
+              schema:
+                type: string
+                example: OK
+  /healthz:
+    get:
+      tags: [Health]
+      summary: Liveness/health check
+      responses:
+        "200":
+          description: Health status
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    example: ok
+                  time:
+                    type: string
+                    format: date-time
+  /login:
+    post:
+      tags: [Auth]
+      summary: Log in and start a session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [username, password]
+              properties:
+                username: { type: string, example: admin }
+                password: { type: string, example: admin }
+      responses:
+        "200":
+          description: Login success
+          headers:
+            Set-Cookie:
+              schema:
+                type: string
+              description: Session cookie
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message: { type: string, example: logged in }
+                  username: { type: string, example: admin }
+                  role: { type: string, example: admin }
+        "401":
+          description: Invalid credentials
+  /logout:
+    get:
+      tags: [Auth]
+      summary: Log out (end session)
+      security:
+        - cookieAuth: []
+      responses:
+        "200":
+          description: Logged out
+  /predict:
+    post:
+      tags: [Forecasting]
+      summary: Forecast next points with Holt-Winters
+      description: |
+        Requires at least 6 numeric points. Performs an 80/20 time-based split,
+        reports out-of-sample MAE/MSE/R², then refits and forecasts 5 steps by default.
+        You may override the default by providing a positive integer `horizon`.
+      security:
+        - cookieAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ForecastRequest'
+      responses:
+        "200":
+          description: Forecast produced
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ForecastResponse'
+        "400":
+          description: Validation error
+        "500":
+          description: Server error
+  /detect_anomaly:
+    post:
+      tags: [Anomaly]
+      summary: Detect anomalies in numeric series
+      description: >
+        Accepts either `sales` or `values`. `method` can be "zscore" (default) or "iqr".
+        Z-score threshold is fixed at 3.0 in the implementation.
+      security:
+        - cookieAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AnomalyRequest'
+      responses:
+        "200":
+          description: Indices/values of anomalies
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnomalyResponse'
+        "400":
+          description: Validation error
+  /detect_anomaly_upload:
+    post:
+      tags: [Anomaly]
+      summary: Detect anomalies from CSV upload
+      description: Accepts a CSV with a 'sales' column or a single numeric column.
+      security:
+        - cookieAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              required: [file]
+              properties:
+                file:
+                  type: string
+                  format: binary
+                method:
+                  type: string
+                  description: zscore or iqr
+                  enum: [zscore, iqr]
+                  default: zscore
+      responses:
+        "200":
+          description: Indices/values of anomalies
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnomalyResponse'
+        "400":
+          description: Validation error
+  /forecast_history:
+    get:
+      tags: [History (Admin)]
+      summary: Recent forecast runs (admin only)
+      security:
+        - cookieAuth: []
+      parameters:
+        - in: query
+          name: limit
+          schema: { type: integer, default: 50, minimum: 1, maximum: 200 }
+        - in: query
+          name: offset
+          schema: { type: integer, default: 0, minimum: 0 }
+      responses:
+        "200":
+          description: List of recent forecasts
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/ForecastHistoryItem'
+                  limit: { type: integer }
+                  offset: { type: integer }
+        "401":
+          description: Not authenticated
+        "403":
+          description: Forbidden
+  /anomaly_history:
+    get:
+      tags: [History (Admin)]
+      summary: Recent anomaly runs (admin only)
+      security:
+        - cookieAuth: []
+      parameters:
+        - in: query
+          name: limit
+          schema: { type: integer, default: 50, minimum: 1, maximum: 200 }
+        - in: query
+          name: offset
+          schema: { type: integer, default: 0, minimum: 0 }
+      responses:
+        "200":
+          description: List of recent anomaly detections
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/AnomalyHistoryItem'
+                  limit: { type: integer }
+                  offset: { type: integer }
+        "401":
+          description: Not authenticated
+        "403":
+          description: Forbidden
+components:
+  securitySchemes:
+    cookieAuth:
+      type: apiKey
+      in: cookie
+      name: session
+  schemas:
+    ForecastRequest:
+      type: object
+      required: [sales]
+      properties:
+        sales:
+          type: array
+          description: Time-ordered numeric series (minimum 6 points).
+          minItems: 6
+          items: { type: number }
+        horizon:
+          type: integer
+          description: Optional override for forecast length (default 5).
+          minimum: 1
+          default: 5
+    ForecastResponse:
+      type: object
+      properties:
+        predictions:
+          type: array
+          items: { type: number }
+          example: [102.3, 101.8, 103.5, 104.1, 104.9]
+        mae: { type: number, example: 2.1 }
+        mse: { type: number, example: 6.2 }
+        r2: { type: number, example: 0.84 }
+    AnomalyRequest:
+      type: object
+      properties:
+        sales:
+          type: array
+          items: { type: number }
+        values:
+          type: array
+          items: { type: number }
+        method:
+          type: string
+          enum: [zscore, iqr]
+          default: zscore
+    AnomalyResponse:
+      type: object
+      properties:
+        indices:
+          type: array
+          items: { type: integer }
+          example: [2, 15, 21]
+        values:
+          type: array
+          items: { type: number }
+          example: [150.0, 5.0, 220.0]
+    ForecastHistoryItem:
+      type: object
+      properties:
+        id: { type: integer, example: 12 }
+        username: { type: string, example: admin }
+        created_at: { type: string, format: date-time }
+        predictions:
+          type: array
+          items: { type: number }
+        mae: { type: number }
+        mse: { type: number }
+        r2: { type: number }
+    AnomalyHistoryItem:
+      type: object
+      properties:
+        id: { type: integer, example: 27 }
+        username: { type: string, example: admin }
+        created_at: { type: string, format: date-time }
+        points_count: { type: integer, example: 120 }
+        anomalies_count: { type: integer, example: 3 }
+        method: { type: string, enum: [zscore, iqr] }
+security:
+  - cookieAuth: []

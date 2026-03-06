@@ -1,0 +1,318 @@
+2025-08-03 12:40:00,930 - WARNING -  * Debugger is active!
+2025-08-03 12:40:00,937 - INFO -  * Debugger PIN: 867-830-205
+2025-08-03 13:00:30,128 - INFO - admin logged in.
+2025-08-03 13:00:30,144 - INFO - 127.0.0.1 - - [03/Aug/2025 13:00:30] "POST /login HTTP/1.1" 200 -
+2025-08-03 13:00:45,260 - INFO - admin used /predict_from_csv
+2025-08-03 13:00:45,270 - INFO - 127.0.0.1 - - [03/Aug/2025 13:00:45] "GET /predict_from_csv HTTP/1.1" 200 -
+2025-08-03 13:11:49,121 - INFO - admin logged in.
+2025-08-03 13:11:49,122 - INFO - 127.0.0.1 - - [03/Aug/2025 13:11:49] "POST /login HTTP/1.1" 200 -
+2025-08-03 13:18:47,427 - INFO - admin logged in.
+2025-08-03 13:18:47,428 - INFO - 127.0.0.1 - - [03/Aug/2025 13:18:47] "POST /login HTTP/1.1" 200 -
+2025-08-03 13:20:13,644 - INFO - admin logged in.
+2025-08-03 13:20:13,645 - INFO - 127.0.0.1 - - [03/Aug/2025 13:20:13] "POST /login HTTP/1.1" 200 -
+2025-08-03 13:21:48,743 - INFO - admin logged in.
+2025-08-03 13:21:48,745 - INFO - 127.0.0.1 - - [03/Aug/2025 13:21:48] "POST /login HTTP/1.1" 200 -
+2025-08-03 13:21:59,856 - INFO - admin logged in.
+2025-08-03 13:21:59,858 - INFO - 127.0.0.1 - - [03/Aug/2025 13:21:59] "POST /login HTTP/1.1" 200 -
+2025-08-03 13:22:39,774 - WARNING - Login failed for qwjio
+2025-08-03 13:22:39,776 - INFO - 127.0.0.1 - - [03/Aug/2025 13:22:39] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-08-03 18:59:51,670 - INFO - 127.0.0.1 - - [03/Aug/2025 18:59:51] "[31m[1mGET /predict HTTP/1.1[0m" 405 -
+2025-08-03 19:00:24,829 - INFO - 127.0.0.1 - - [03/Aug/2025 19:00:24] "[31m[1mPOST /predict HTTP/1.1[0m" 401 -
+2025-08-03 19:00:55,534 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-03 19:01:43,743 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-03 19:01:43,743 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-03 19:01:43,743 - INFO -  * Restarting with stat
+2025-08-03 19:01:45,198 - WARNING -  * Debugger is active!
+2025-08-03 19:01:45,219 - INFO -  * Debugger PIN: 867-830-205
+2025-08-03 19:05:39,622 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-03 19:05:39,624 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-03 19:05:39,626 - INFO -  * Restarting with stat
+2025-08-03 19:05:41,208 - WARNING -  * Debugger is active!
+2025-08-03 19:05:41,221 - INFO -  * Debugger PIN: 867-830-205
+2025-08-03 19:09:21,552 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-03 19:09:21,552 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-03 19:09:21,552 - INFO -  * Restarting with stat
+2025-08-03 19:09:23,030 - WARNING -  * Debugger is active!
+2025-08-03 19:09:23,031 - INFO -  * Debugger PIN: 867-830-205
+2025-08-03 19:14:26,155 - WARNING - Login failed for None
+2025-08-03 19:14:26,156 - INFO - 127.0.0.1 - - [03/Aug/2025 19:14:26] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-08-03 19:15:24,504 - INFO - 127.0.0.1 - - [03/Aug/2025 19:15:24] "[31m[1mPOST /predict HTTP/1.1[0m" 401 -
+2025-08-03 19:18:34,346 - INFO - admin logged in.
+2025-08-03 19:18:34,352 - INFO - 127.0.0.1 - - [03/Aug/2025 19:18:34] "POST /login HTTP/1.1" 200 -
+2025-08-03 19:18:56,859 - ERROR - /predict failed: 'sales'
+2025-08-03 19:18:56,859 - INFO - 127.0.0.1 - - [03/Aug/2025 19:18:56] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-08-03 19:19:46,702 - ERROR - /predict failed: If using all scalar values, you must pass an index
+2025-08-03 19:19:46,703 - INFO - 127.0.0.1 - - [03/Aug/2025 19:19:46] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-08-03 19:20:28,398 - ERROR - /predict failed: could not convert string to float: 'bad'
+2025-08-03 19:20:28,398 - INFO - 127.0.0.1 - - [03/Aug/2025 19:20:28] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-08-09 09:56:57,979 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-09 09:56:57,982 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-09 09:56:57,982 - INFO -  * Restarting with stat
+2025-08-09 09:57:01,859 - WARNING -  * Debugger is active!
+2025-08-09 09:57:01,882 - INFO -  * Debugger PIN: 867-830-205
+2025-08-09 09:58:35,225 - INFO - admin logged in.
+2025-08-09 09:58:35,225 - INFO - 127.0.0.1 - - [09/Aug/2025 09:58:35] "POST /login HTTP/1.1" 200 -
+2025-08-09 09:59:37,647 - ERROR - Database logging failed: table forecast_log has no column named user
+2025-08-09 09:59:37,647 - INFO - User admin requested forecast
+2025-08-09 09:59:37,648 - INFO - 127.0.0.1 - - [09/Aug/2025 09:59:37] "POST /predict HTTP/1.1" 200 -
+2025-08-09 10:00:56,909 - INFO - 127.0.0.1 - - [09/Aug/2025 10:00:56] "[31m[1mPOST /logout HTTP/1.1[0m" 405 -
+2025-08-09 10:01:07,407 - INFO - admin logged out.
+2025-08-09 10:01:07,409 - INFO - 127.0.0.1 - - [09/Aug/2025 10:01:07] "GET /logout HTTP/1.1" 200 -
+2025-08-09 10:02:16,107 - INFO - 127.0.0.1 - - [09/Aug/2025 10:02:16] "[31m[1mPOST /predict HTTP/1.1[0m" 401 -
+2025-08-11 18:48:52,087 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-11 18:48:53,416 - INFO -  * Restarting with stat
+2025-08-11 18:49:05,873 - WARNING -  * Debugger is active!
+2025-08-11 18:49:05,882 - INFO -  * Debugger PIN: 867-830-205
+2025-08-11 18:50:10,752 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-11 18:50:10,752 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-11 18:50:10,753 - INFO -  * Restarting with stat
+2025-08-11 18:50:12,435 - WARNING -  * Debugger is active!
+2025-08-11 18:50:12,447 - INFO -  * Debugger PIN: 867-830-205
+2025-08-11 18:50:28,307 - INFO - 127.0.0.1 - - [11/Aug/2025 18:50:28] "[31m[1mPOST /predict HTTP/1.1[0m" 401 -
+2025-08-11 18:51:43,661 - INFO - admin logged in.
+2025-08-11 18:51:43,669 - INFO - 127.0.0.1 - - [11/Aug/2025 18:51:43] "POST /login HTTP/1.1" 200 -
+2025-08-11 18:51:55,572 - ERROR - /predict failed: 'sales'
+2025-08-11 18:51:55,572 - INFO - 127.0.0.1 - - [11/Aug/2025 18:51:55] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-08-11 18:52:11,459 - ERROR - Database logging failed: table forecast_log has no column named user
+2025-08-11 18:52:11,459 - INFO - User admin requested forecast
+2025-08-11 18:52:11,459 - INFO - 127.0.0.1 - - [11/Aug/2025 18:52:11] "POST /predict HTTP/1.1" 200 -
+2025-08-11 18:52:37,693 - INFO - admin logged out.
+2025-08-11 18:52:37,693 - INFO - 127.0.0.1 - - [11/Aug/2025 18:52:37] "GET /logout HTTP/1.1" 200 -
+2025-08-11 18:52:52,297 - INFO - 127.0.0.1 - - [11/Aug/2025 18:52:52] "[31m[1mPOST /predict HTTP/1.1[0m" 401 -
+2025-08-11 19:00:09,707 - INFO - user logged in.
+2025-08-11 19:00:09,708 - INFO - 127.0.0.1 - - [11/Aug/2025 19:00:09] "POST /login HTTP/1.1" 200 -
+2025-08-11 19:00:35,383 - INFO - 127.0.0.1 - - [11/Aug/2025 19:00:35] "[31m[1mPOST /admin-only HTTP/1.1[0m" 405 -
+2025-08-11 19:02:36,652 - WARNING - Unauthorized access attempt by user
+2025-08-11 19:02:36,653 - INFO - 127.0.0.1 - - [11/Aug/2025 19:02:36] "[31m[1mGET /admin-only HTTP/1.1[0m" 403 -
+2025-08-11 19:03:00,951 - INFO - user logged out.
+2025-08-11 19:03:00,952 - INFO - 127.0.0.1 - - [11/Aug/2025 19:03:00] "GET /logout HTTP/1.1" 200 -
+2025-08-11 19:03:35,769 - INFO - admin logged in.
+2025-08-11 19:03:35,771 - INFO - 127.0.0.1 - - [11/Aug/2025 19:03:35] "POST /login HTTP/1.1" 200 -
+2025-08-11 19:05:13,318 - INFO - 127.0.0.1 - - [11/Aug/2025 19:05:13] "GET /admin-only HTTP/1.1" 200 -
+2025-08-11 19:32:32,250 - INFO - admin logged in.
+2025-08-11 19:32:32,252 - INFO - 127.0.0.1 - - [11/Aug/2025 19:32:32] "POST /login HTTP/1.1" 200 -
+2025-08-11 19:33:00,164 - ERROR - Database logging failed: table forecast_log has no column named user
+2025-08-11 19:33:00,164 - INFO - User admin requested forecast
+2025-08-11 19:33:00,164 - INFO - 127.0.0.1 - - [11/Aug/2025 19:33:00] "POST /predict HTTP/1.1" 200 -
+2025-08-11 19:33:23,711 - INFO - 127.0.0.1 - - [11/Aug/2025 19:33:23] "[31m[1mPOST /logout HTTP/1.1[0m" 405 -
+2025-08-11 19:33:29,746 - INFO - admin logged out.
+2025-08-11 19:33:29,746 - INFO - 127.0.0.1 - - [11/Aug/2025 19:33:29] "GET /logout HTTP/1.1" 200 -
+2025-08-11 19:33:55,536 - INFO - 127.0.0.1 - - [11/Aug/2025 19:33:55] "[31m[1mPOST /predict HTTP/1.1[0m" 401 -
+2025-08-11 19:53:28,082 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-11 19:53:28,868 - INFO -  * Restarting with stat
+2025-08-11 19:53:37,960 - WARNING -  * Debugger is active!
+2025-08-11 19:53:37,970 - INFO -  * Debugger PIN: 867-830-205
+2025-08-11 19:58:42,380 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-11 19:58:42,534 - INFO -  * Restarting with stat
+2025-08-11 19:58:44,291 - WARNING -  * Debugger is active!
+2025-08-11 19:58:44,293 - INFO -  * Debugger PIN: 867-830-205
+2025-08-11 19:59:30,653 - INFO - 127.0.0.1 - - [11/Aug/2025 19:59:30] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-08-11 20:00:19,030 - INFO - 127.0.0.1 - - [11/Aug/2025 20:00:19] "[35m[1mPOST /login HTTP/1.1[0m" 500 -
+2025-08-11 20:08:50,328 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-11 20:08:50,497 - INFO -  * Restarting with stat
+2025-08-11 20:08:52,324 - WARNING -  * Debugger is active!
+2025-08-11 20:08:52,324 - INFO -  * Debugger PIN: 867-830-205
+2025-08-11 20:09:59,030 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-11 20:09:59,190 - INFO -  * Restarting with stat
+2025-08-11 20:10:01,062 - WARNING -  * Debugger is active!
+2025-08-11 20:10:01,063 - INFO -  * Debugger PIN: 867-830-205
+2025-08-11 20:10:02,211 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-11 20:10:02,377 - INFO -  * Restarting with stat
+2025-08-11 20:10:04,162 - WARNING -  * Debugger is active!
+2025-08-11 20:10:04,162 - INFO -  * Debugger PIN: 867-830-205
+2025-08-11 20:10:12,867 - WARNING - Login failed: bad password for admin
+2025-08-11 20:10:12,868 - INFO - 127.0.0.1 - - [11/Aug/2025 20:10:12] "[31m[1mPOST /login HTTP/1.1[0m" 401 -
+2025-08-11 20:10:45,229 - INFO - admin logged in.
+2025-08-11 20:10:45,234 - INFO - 127.0.0.1 - - [11/Aug/2025 20:10:45] "POST /login HTTP/1.1" 200 -
+2025-08-11 20:11:10,922 - ERROR - /predict failed: 'sales'
+2025-08-11 20:11:10,923 - INFO - 127.0.0.1 - - [11/Aug/2025 20:11:10] "[35m[1mPOST /predict HTTP/1.1[0m" 500 -
+2025-08-11 20:11:29,652 - ERROR - Database logging failed: table forecast_log has no column named user
+2025-08-11 20:11:29,652 - INFO - User admin requested forecast
+2025-08-11 20:11:29,653 - INFO - 127.0.0.1 - - [11/Aug/2025 20:11:29] "POST /predict HTTP/1.1" 200 -
+2025-08-11 20:12:20,971 - INFO - admin logged out.
+2025-08-11 20:12:20,972 - INFO - 127.0.0.1 - - [11/Aug/2025 20:12:20] "GET /logout HTTP/1.1" 200 -
+2025-08-11 20:12:56,594 - INFO - user logged in.
+2025-08-11 20:12:56,595 - INFO - 127.0.0.1 - - [11/Aug/2025 20:12:56] "POST /login HTTP/1.1" 200 -
+2025-08-11 20:13:14,204 - INFO - 127.0.0.1 - - [11/Aug/2025 20:13:14] "[31m[1mPOST /admin-only HTTP/1.1[0m" 405 -
+2025-08-11 20:13:31,355 - WARNING - Unauthorized access attempt by user
+2025-08-11 20:13:31,355 - INFO - 127.0.0.1 - - [11/Aug/2025 20:13:31] "[31m[1mGET /admin-only HTTP/1.1[0m" 403 -
+2025-08-11 20:14:01,550 - INFO - user logged out.
+2025-08-11 20:14:01,550 - INFO - 127.0.0.1 - - [11/Aug/2025 20:14:01] "GET /logout HTTP/1.1" 200 -
+2025-08-11 20:14:24,251 - INFO - admin logged in.
+2025-08-11 20:14:24,252 - INFO - 127.0.0.1 - - [11/Aug/2025 20:14:24] "POST /login HTTP/1.1" 200 -
+2025-08-11 20:14:40,152 - INFO - 127.0.0.1 - - [11/Aug/2025 20:14:40] "GET /admin-only HTTP/1.1" 200 -
+2025-08-11 20:15:01,333 - INFO - admin logged out.
+2025-08-11 20:15:01,333 - INFO - 127.0.0.1 - - [11/Aug/2025 20:15:01] "GET /logout HTTP/1.1" 200 -
+2025-08-11 20:15:25,254 - INFO - 127.0.0.1 - - [11/Aug/2025 20:15:25] "[31m[1mPOST /predict HTTP/1.1[0m" 401 -
+2025-08-12 13:21:12,785 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-12 13:21:14,645 - INFO -  * Restarting with stat
+2025-08-14 10:37:09,357 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-14 10:37:09,360 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-14 10:37:09,362 - INFO -  * Restarting with stat
+2025-08-14 10:37:13,255 - WARNING -  * Debugger is active!
+2025-08-14 10:37:13,266 - INFO -  * Debugger PIN: 867-830-205
+2025-08-14 10:37:28,622 - INFO - 127.0.0.1 - - [14/Aug/2025 10:37:28] "[32mGET /docs HTTP/1.1[0m" 308 -
+2025-08-14 10:37:28,746 - INFO - 127.0.0.1 - - [14/Aug/2025 10:37:28] "GET /docs/ HTTP/1.1" 200 -
+2025-08-14 10:37:29,030 - INFO - 127.0.0.1 - - [14/Aug/2025 10:37:29] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2025-08-14 10:37:29,062 - INFO - 127.0.0.1 - - [14/Aug/2025 10:37:29] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-08-14 10:37:29,176 - INFO - 127.0.0.1 - - [14/Aug/2025 10:37:29] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-08-14 10:37:29,178 - INFO - 127.0.0.1 - - [14/Aug/2025 10:37:29] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-08-14 10:37:29,526 - INFO - 127.0.0.1 - - [14/Aug/2025 10:37:29] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-08-14 10:37:29,540 - INFO - 127.0.0.1 - - [14/Aug/2025 10:37:29] "GET /static/swagger.yaml HTTP/1.1" 200 -
+2025-08-14 10:53:38,951 - INFO - 127.0.0.1 - - [14/Aug/2025 10:53:38] "GET /docs/ HTTP/1.1" 200 -
+2025-08-14 10:53:38,987 - INFO - 127.0.0.1 - - [14/Aug/2025 10:53:38] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2025-08-14 10:53:38,987 - INFO - 127.0.0.1 - - [14/Aug/2025 10:53:38] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-08-14 10:53:38,994 - INFO - 127.0.0.1 - - [14/Aug/2025 10:53:38] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-08-14 10:53:38,999 - INFO - 127.0.0.1 - - [14/Aug/2025 10:53:38] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-08-14 10:53:39,264 - INFO - 127.0.0.1 - - [14/Aug/2025 10:53:39] "[36mGET /static/swagger.yaml HTTP/1.1[0m" 304 -
+2025-08-14 10:53:39,290 - INFO - 127.0.0.1 - - [14/Aug/2025 10:53:39] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-08-14 10:55:31,143 - INFO - 127.0.0.1 - - [14/Aug/2025 10:55:31] "GET / HTTP/1.1" 200 -
+2025-08-14 10:55:31,229 - INFO - 127.0.0.1 - - [14/Aug/2025 10:55:31] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-08-14 10:55:49,713 - INFO - 127.0.0.1 - - [14/Aug/2025 10:55:49] "[31m[1mPOST / HTTP/1.1[0m" 405 -
+2025-08-14 10:55:56,630 - INFO - 127.0.0.1 - - [14/Aug/2025 10:55:56] "GET / HTTP/1.1" 200 -
+2025-08-14 10:56:19,627 - INFO - admin logged in.
+2025-08-14 10:56:19,675 - INFO - 127.0.0.1 - - [14/Aug/2025 10:56:19] "POST /login HTTP/1.1" 200 -
+2025-08-14 10:56:53,622 - INFO - 127.0.0.1 - - [14/Aug/2025 10:56:53] "[31m[1mPOST /detect_anomaly HTTP/1.1[0m" 400 -
+2025-08-14 10:57:23,394 - INFO - Anomaly log saved for user admin
+2025-08-14 10:57:23,394 - INFO - User admin requested anomaly detection
+2025-08-14 10:57:23,394 - INFO - 127.0.0.1 - - [14/Aug/2025 10:57:23] "POST /detect_anomaly HTTP/1.1" 200 -
+2025-08-14 10:59:57,145 - INFO - 127.0.0.1 - - [14/Aug/2025 10:59:57] "[31m[1mGET /anomaly_history?user=admin&date_from=2025-08-01&date_to=2025-08-14&limit=100 HTTP/1.1[0m" 401 -
+2025-08-14 11:00:20,624 - INFO - admin logged in.
+2025-08-14 11:00:20,626 - INFO - 127.0.0.1 - - [14/Aug/2025 11:00:20] "POST /login HTTP/1.1" 200 -
+2025-08-14 11:00:34,392 - INFO - 127.0.0.1 - - [14/Aug/2025 11:00:34] "GET /anomaly_history?user=admin&date_from=2025-08-01&date_to=2025-08-14&limit=100 HTTP/1.1" 200 -
+2025-08-14 11:09:24,332 - INFO - 127.0.0.1 - - [14/Aug/2025 11:09:24] "[31m[1mPOST /detect_anomaly_csv HTTP/1.1[0m" 400 -
+2025-08-14 11:09:52,275 - INFO - 127.0.0.1 - - [14/Aug/2025 11:09:52] "[31m[1mPOST /detect_anomaly_csv HTTP/1.1[0m" 400 -
+2025-08-14 11:15:39,658 - INFO - Anomaly log saved for user admin
+2025-08-14 11:15:39,659 - INFO - admin ran /detect_anomaly_csv
+2025-08-14 11:15:39,659 - INFO - 127.0.0.1 - - [14/Aug/2025 11:15:39] "POST /detect_anomaly_csv HTTP/1.1" 200 -
+2025-08-14 11:17:12,470 - INFO - Anomaly log saved for user admin
+2025-08-14 11:17:12,470 - INFO - admin ran /detect_anomaly_csv
+2025-08-14 11:17:12,470 - INFO - 127.0.0.1 - - [14/Aug/2025 11:17:12] "POST /detect_anomaly_csv HTTP/1.1" 200 -
+2025-08-14 11:24:39,034 - INFO - Anomaly log saved for user admin
+2025-08-14 11:24:39,034 - INFO - admin ran /detect_anomaly_csv
+2025-08-14 11:24:39,036 - INFO - 127.0.0.1 - - [14/Aug/2025 11:24:39] "POST /detect_anomaly_csv HTTP/1.1" 200 -
+2025-08-14 11:25:07,216 - INFO - 127.0.0.1 - - [14/Aug/2025 11:25:07] "GET /anomaly_history?limit=20 HTTP/1.1" 200 -
+2025-08-14 11:26:04,221 - INFO - admin logged out.
+2025-08-14 11:26:04,222 - INFO - 127.0.0.1 - - [14/Aug/2025 11:26:04] "GET /logout HTTP/1.1" 200 -
+2025-08-14 11:26:40,979 - INFO - user logged in.
+2025-08-14 11:26:40,999 - INFO - 127.0.0.1 - - [14/Aug/2025 11:26:40] "POST /login HTTP/1.1" 200 -
+2025-08-14 11:27:14,490 - WARNING - Unauthorized access attempt by user
+2025-08-14 11:27:14,491 - INFO - 127.0.0.1 - - [14/Aug/2025 11:27:14] "[31m[1mGET /anomaly_history?limit=5 HTTP/1.1[0m" 403 -
+2025-08-14 11:38:13,768 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-14 11:38:14,604 - INFO -  * Restarting with stat
+2025-08-14 11:38:24,345 - WARNING -  * Debugger is active!
+2025-08-14 11:38:24,348 - INFO -  * Debugger PIN: 867-830-205
+2025-08-14 11:53:30,025 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-14 11:53:31,211 - INFO -  * Restarting with stat
+2025-08-14 11:53:37,879 - WARNING -  * Debugger is active!
+2025-08-14 11:53:37,892 - INFO -  * Debugger PIN: 867-830-205
+2025-08-14 12:02:42,846 - INFO - admin logged in.
+2025-08-14 12:02:42,879 - INFO - 127.0.0.1 - - [14/Aug/2025 12:02:42] "POST /login HTTP/1.1" 200 -
+2025-08-14 12:02:57,164 - INFO - admin used /predict_from_csv with 7 rows
+2025-08-14 12:02:57,165 - INFO - 127.0.0.1 - - [14/Aug/2025 12:02:57] "GET /predict_from_csv HTTP/1.1" 200 -
+2025-08-14 12:03:40,228 - INFO - Anomaly log saved for user admin
+2025-08-14 12:03:40,228 - INFO - admin ran /detect_anomaly_csv with 7 rows
+2025-08-14 12:03:40,229 - INFO - 127.0.0.1 - - [14/Aug/2025 12:03:40] "POST /detect_anomaly_csv HTTP/1.1" 200 -
+2025-08-14 12:03:47,516 - INFO - admin used /predict_from_csv with 7 rows
+2025-08-14 12:03:47,516 - INFO - 127.0.0.1 - - [14/Aug/2025 12:03:47] "GET /predict_from_csv HTTP/1.1" 200 -
+2025-08-14 12:03:56,598 - INFO - admin logged out.
+2025-08-14 12:03:56,599 - INFO - 127.0.0.1 - - [14/Aug/2025 12:03:56] "GET /logout HTTP/1.1" 200 -
+2025-08-14 12:04:10,544 - INFO - user logged in.
+2025-08-14 12:04:10,545 - INFO - 127.0.0.1 - - [14/Aug/2025 12:04:10] "POST /login HTTP/1.1" 200 -
+2025-08-14 12:07:33,055 - INFO - Forecast logged by user
+2025-08-14 12:07:33,055 - INFO - User user requested forecast
+2025-08-14 12:07:33,056 - INFO - 127.0.0.1 - - [14/Aug/2025 12:07:33] "POST /predict HTTP/1.1" 200 -
+2025-08-14 12:07:46,577 - INFO - Forecast logged by user
+2025-08-14 12:07:46,577 - INFO - User user requested forecast
+2025-08-14 12:07:46,578 - INFO - 127.0.0.1 - - [14/Aug/2025 12:07:46] "POST /predict HTTP/1.1" 200 -
+2025-08-14 12:07:50,678 - INFO - Forecast logged by user
+2025-08-14 12:07:50,678 - INFO - User user requested forecast
+2025-08-14 12:07:50,681 - INFO - 127.0.0.1 - - [14/Aug/2025 12:07:50] "POST /predict HTTP/1.1" 200 -
+2025-08-14 12:07:54,865 - INFO - Anomaly log saved for user user
+2025-08-14 12:07:54,865 - INFO - User user requested anomaly detection
+2025-08-14 12:07:54,866 - INFO - 127.0.0.1 - - [14/Aug/2025 12:07:54] "POST /detect_anomaly HTTP/1.1" 200 -
+2025-08-14 12:07:58,225 - INFO - Forecast logged by user
+2025-08-14 12:07:58,226 - INFO - User user requested forecast
+2025-08-14 12:07:58,227 - INFO - 127.0.0.1 - - [14/Aug/2025 12:07:58] "POST /predict HTTP/1.1" 200 -
+2025-08-14 12:08:01,983 - INFO - Forecast logged by user
+2025-08-14 12:08:01,984 - INFO - User user requested forecast
+2025-08-14 12:08:01,985 - INFO - 127.0.0.1 - - [14/Aug/2025 12:08:01] "POST /predict HTTP/1.1" 200 -
+2025-08-14 12:08:05,970 - INFO - Forecast logged by user
+2025-08-14 12:08:05,970 - INFO - User user requested forecast
+2025-08-14 12:08:05,971 - INFO - 127.0.0.1 - - [14/Aug/2025 12:08:05] "POST /predict HTTP/1.1" 200 -
+2025-08-14 12:14:54,510 - INFO - Forecast logged by user
+2025-08-14 12:14:54,511 - INFO - User user requested forecast
+2025-08-14 12:14:54,512 - INFO - 127.0.0.1 - - [14/Aug/2025 12:14:54] "POST /predict HTTP/1.1" 200 -
+2025-08-14 12:15:28,253 - INFO - admin logged in.
+2025-08-14 12:15:28,255 - INFO - 127.0.0.1 - - [14/Aug/2025 12:15:28] "POST /login HTTP/1.1" 200 -
+2025-08-14 12:16:03,603 - INFO - admin logged in.
+2025-08-14 12:16:03,606 - INFO - 127.0.0.1 - - [14/Aug/2025 12:16:03] "POST /login HTTP/1.1" 200 -
+2025-08-14 12:16:57,795 - INFO - user logged in.
+2025-08-14 12:16:57,796 - INFO - 127.0.0.1 - - [14/Aug/2025 12:16:57] "POST /login HTTP/1.1" 200 -
+2025-08-14 12:18:16,236 - INFO - admin logged in.
+2025-08-14 12:18:16,238 - INFO - 127.0.0.1 - - [14/Aug/2025 12:18:16] "POST /login HTTP/1.1" 200 -
+2025-08-14 12:18:22,939 - INFO - admin logged out.
+2025-08-14 12:18:22,941 - INFO - 127.0.0.1 - - [14/Aug/2025 12:18:22] "GET /logout HTTP/1.1" 200 -
+2025-08-14 12:18:36,926 - INFO - user logged in.
+2025-08-14 12:18:36,928 - INFO - 127.0.0.1 - - [14/Aug/2025 12:18:36] "POST /login HTTP/1.1" 200 -
+2025-08-14 12:18:42,374 - INFO - user used /predict_from_csv with 7 rows
+2025-08-14 12:18:42,374 - INFO - 127.0.0.1 - - [14/Aug/2025 12:18:42] "GET /predict_from_csv HTTP/1.1" 200 -
+2025-08-14 12:19:02,404 - INFO - Anomaly log saved for user user
+2025-08-14 12:19:02,405 - INFO - user ran /detect_anomaly_csv with 7 rows
+2025-08-14 12:19:02,406 - INFO - 127.0.0.1 - - [14/Aug/2025 12:19:02] "POST /detect_anomaly_csv HTTP/1.1" 200 -
+2025-08-14 12:19:11,284 - INFO - 127.0.0.1 - - [14/Aug/2025 12:19:11] "GET /docs/ HTTP/1.1" 200 -
+2025-08-14 12:19:11,660 - INFO - 127.0.0.1 - - [14/Aug/2025 12:19:11] "[36mGET /docs/index.css HTTP/1.1[0m" 304 -
+2025-08-14 12:19:11,696 - INFO - 127.0.0.1 - - [14/Aug/2025 12:19:11] "[36mGET /docs/swagger-ui.css HTTP/1.1[0m" 304 -
+2025-08-14 12:19:11,812 - INFO - 127.0.0.1 - - [14/Aug/2025 12:19:11] "[36mGET /docs/swagger-ui-bundle.js HTTP/1.1[0m" 304 -
+2025-08-14 12:19:11,820 - INFO - 127.0.0.1 - - [14/Aug/2025 12:19:11] "[36mGET /docs/swagger-ui-standalone-preset.js HTTP/1.1[0m" 304 -
+2025-08-14 12:19:12,132 - INFO - 127.0.0.1 - - [14/Aug/2025 12:19:12] "[36mGET /docs/favicon-32x32.png HTTP/1.1[0m" 304 -
+2025-08-14 12:19:12,165 - INFO - 127.0.0.1 - - [14/Aug/2025 12:19:12] "GET /static/swagger.yaml HTTP/1.1" 200 -
+2025-08-14 12:23:38,032 - INFO - admin logged in.
+2025-08-14 12:23:38,034 - INFO - 127.0.0.1 - - [14/Aug/2025 12:23:38] "POST /login HTTP/1.1" 200 -
+2025-08-14 12:23:40,722 - INFO - admin logged out.
+2025-08-14 12:23:40,724 - INFO - 127.0.0.1 - - [14/Aug/2025 12:23:40] "GET /logout HTTP/1.1" 200 -
+2025-08-14 15:11:51,757 - INFO - admin logged in.
+2025-08-14 15:11:51,781 - INFO - 127.0.0.1 - - [14/Aug/2025 15:11:51] "POST /login HTTP/1.1" 200 -
+2025-08-14 15:11:58,188 - INFO - admin logged out.
+2025-08-14 15:11:58,196 - INFO - 127.0.0.1 - - [14/Aug/2025 15:11:58] "GET /logout HTTP/1.1" 200 -
+2025-08-14 15:13:41,205 - INFO - admin logged in.
+2025-08-14 15:13:41,206 - INFO - 127.0.0.1 - - [14/Aug/2025 15:13:41] "POST /login HTTP/1.1" 200 -
+2025-08-14 15:13:49,339 - INFO - Forecast logged by admin
+2025-08-14 15:13:49,340 - INFO - User admin requested forecast
+2025-08-14 15:13:49,341 - INFO - 127.0.0.1 - - [14/Aug/2025 15:13:49] "POST /predict HTTP/1.1" 200 -
+2025-08-14 15:15:25,815 - INFO - admin logged out.
+2025-08-14 15:15:25,817 - INFO - 127.0.0.1 - - [14/Aug/2025 15:15:25] "GET /logout HTTP/1.1" 200 -
+2025-08-14 16:00:21,750 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-14 16:00:22,609 - INFO -  * Restarting with stat
+2025-08-14 16:00:25,906 - WARNING -  * Debugger is active!
+2025-08-14 16:00:25,909 - INFO -  * Debugger PIN: 867-830-205
+2025-08-16 14:33:29,125 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\test_api.py', reloading
+2025-08-16 14:33:30,731 - INFO -  * Restarting with stat
+2025-08-16 14:33:51,204 - WARNING -  * Debugger is active!
+2025-08-16 14:33:51,221 - INFO -  * Debugger PIN: 867-830-205
+2025-08-20 11:15:06,354 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-08-20 11:15:06,355 - INFO - [33mPress CTRL+C to quit[0m
+2025-08-20 11:15:06,361 - INFO -  * Restarting with stat
+2025-08-20 11:15:10,748 - WARNING -  * Debugger is active!
+2025-08-20 11:15:10,764 - INFO -  * Debugger PIN: 867-830-205
+2025-08-20 11:15:32,681 - INFO - admin logged in.
+2025-08-20 11:15:32,684 - INFO - 127.0.0.1 - - [20/Aug/2025 11:15:32] "POST /login HTTP/1.1" 200 -
+2025-08-20 11:15:39,751 - INFO - Forecast logged by admin
+2025-08-20 11:15:39,751 - INFO - User admin requested forecast
+2025-08-20 11:15:39,752 - INFO - 127.0.0.1 - - [20/Aug/2025 11:15:39] "POST /predict HTTP/1.1" 200 -
+2025-08-20 11:16:49,082 - INFO - Forecast logged by admin
+2025-08-20 11:16:49,084 - INFO - User admin requested forecast
+2025-08-20 11:16:49,085 - INFO - 127.0.0.1 - - [20/Aug/2025 11:16:49] "POST /predict HTTP/1.1" 200 -
+2025-08-20 11:59:52,540 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-20 11:59:54,529 - INFO -  * Restarting with stat
+2025-08-20 12:00:01,095 - WARNING -  * Debugger is active!
+2025-08-20 12:00:01,111 - INFO -  * Debugger PIN: 867-830-205
+2025-08-20 12:15:39,069 - INFO -  * Detected change in 'C:\\Users\\bhanu\\Desktop\\InventoryOptimizer\\python_api\\app.py', reloading
+2025-08-20 12:15:39,550 - INFO -  * Restarting with stat
