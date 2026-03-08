@@ -1,103 +1,144 @@
-# Inventory Optimizer API
+# Inventory Optimizer
 
-A Flask-based REST API that predicts product demand using machine learning to help businesses optimize inventory levels.
+Inventory Optimizer is a system designed to help businesses forecast product demand and optimize stock levels using machine learning.
 
-The system uses a **Random Forest Regression model** trained on historical sales data to forecast future demand and support inventory decision-making.
+The project consists of two main components:
 
----
-
-## Features
-
-- Machine learning demand forecasting using **Random Forest Regressor**
-- REST API built with **Flask**
-- User authentication using **Flask-Login**
-- **SQLite database** for data storage
-- API activity logging
-- Swagger UI for API documentation
-- Data processing with **Pandas** and **NumPy**
+1. **Inventory Dashboard (Java)** – A user interface for managing inventory and viewing insights.
+2. **Prediction API (Python + Flask)** – A machine learning service that predicts product demand using historical data.
 
 ---
 
-## Project Structure
+# System Architecture
 
-```
-InventoryOptimizer/
-│
-└── python_api/
-    │
-    ├── app.py              # Main Flask API application
-    ├── model.py            # Machine learning model logic
-    ├── requirements.txt    # Python dependencies
-    ├── app.log             # Application logs
-    │
-    └── venv/               # Virtual environment (not recommended to commit)
-```
+The system follows a client–server architecture.
+
+InventoryDashboard (Java UI)  
+⬇  
+Flask API (Python Backend)  
+⬇  
+Machine Learning Model (Random Forest)  
+⬇  
+SQLite Database
 
 ---
 
-## Technologies Used
+# Components
+
+## 1. Inventory Dashboard (Java)
+
+The Inventory Dashboard provides a graphical interface for interacting with the system.
+
+### Features
+
+- View product inventory
+- Upload or manage sales data
+- Request demand predictions
+- Display forecasting results
+- Communicate with the backend prediction API
+
+### Technologies Used
+
+- Java
+- Java Swing / JavaFX (depending on your implementation)
+- HTTP requests to connect with Flask API
+
+---
+
+## 2. Prediction API (Python)
+
+The backend service is built using **Flask** and provides endpoints for training models and predicting inventory demand.
+
+### Features
+
+- Machine learning demand prediction
+- REST API endpoints
+- Data processing with Pandas
+- Model training using Scikit-learn
+- SQLite database support
+- Logging system
+
+### Technologies Used
 
 - Python
 - Flask
 - Pandas
 - NumPy
 - Scikit-learn
-- SciPy
 - SQLite
 - Joblib
-- Flask-Login
-- Swagger UI
 
 ---
 
-## Installation
+# Project Structure
 
-### 1. Clone the repository
+```
+InventoryOptimizer/
+│
+├── InventoryDashboard/        # Java UI application
+│
+└── python_api/                # Flask ML API
+    │
+    ├── app.py
+    ├── model.py
+    ├── requirements.txt
+    └── app.log
+```
+
+---
+
+# Installation
+
+## 1. Clone the repository
 
 ```bash
 git clone https://github.com/yourusername/inventory-optimizer.git
-cd inventory-optimizer/python_api
+cd inventory-optimizer
 ```
 
-### 2. Create a virtual environment
+---
+
+# Running the Python API
+
+Navigate to the API folder.
+
+```bash
+cd python_api
+```
+
+Create virtual environment.
 
 ```bash
 python -m venv venv
 ```
 
-Activate the environment.
+Activate environment.
 
-**Windows**
+Windows
 
 ```bash
 venv\Scripts\activate
 ```
 
-**Mac / Linux**
+Mac/Linux
 
 ```bash
 source venv/bin/activate
 ```
 
----
-
-### 3. Install dependencies
+Install dependencies.
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## Running the Application
-
-Start the Flask API server.
+Run the API.
 
 ```bash
 python app.py
 ```
 
-The API will run on:
+The API will start at:
 
 ```
 http://localhost:5000
@@ -105,103 +146,60 @@ http://localhost:5000
 
 ---
 
-## API Documentation
+# Running the Java Dashboard
 
-Swagger UI can be accessed at:
+Open the **InventoryDashboard** project in your Java IDE.
 
-```
-http://localhost:5000/swagger
-```
+Supported IDEs:
 
-This interface allows you to test and explore the API endpoints.
+- IntelliJ IDEA
+- Eclipse
+- NetBeans
+
+Steps:
+
+1. Open the `InventoryDashboard` folder in the IDE.
+2. Build the project.
+3. Run the main class.
+
+The dashboard will connect to the Flask API for predictions.
 
 ---
 
-## Machine Learning Model
+# Machine Learning Model
 
 The system uses **RandomForestRegressor from Scikit-learn**.
 
-### Workflow
+Workflow:
 
-1. Load historical sales data
-2. Data preprocessing using Pandas
-3. Feature engineering
-4. Train Random Forest model
-5. Evaluate model performance
-6. Save model using Joblib
-7. Generate demand predictions
+1. Collect historical sales data
+2. Perform data preprocessing
+3. Train the model
+4. Save the model
+5. Generate demand predictions through the API
 
 ---
 
-## Example Use Case
+# Logging
 
-1. User logs into the system.
-2. Historical sales or inventory data is uploaded.
-3. The system trains the machine learning model.
-4. Future demand predictions are generated.
-5. Results are returned through the API.
-
----
-
-## Logging
-
-Application logs are stored in:
+API logs are stored in:
 
 ```
-app.log
-```
-
-Logs include:
-
-- API requests
-- Errors
-- System activity
-
----
-
-## Security
-
-The API includes basic security features:
-
-- Password hashing using **Werkzeug**
-- Session-based authentication
-- Protected API routes
-
----
-
-## Dependencies
-
-Key libraries used in this project:
-
-- Flask
-- Pandas
-- NumPy
-- Scikit-learn
-- SciPy
-- Joblib
-- Matplotlib
-
-All dependencies are listed in:
-
-```
-requirements.txt
+python_api/app.log
 ```
 
 ---
 
-## Future Improvements
+# Future Improvements
 
-Potential improvements for this project:
-
-- Add deep learning forecasting models
-- Create a web dashboard for visualization
-- Integrate cloud databases
-- Implement role-based access control
-- Dockerize the application
-- Deploy to cloud platforms
+- Add real-time inventory tracking
+- Implement deep learning forecasting models
+- Deploy API to cloud services
+- Add role-based authentication
+- Create advanced analytics dashboards
 
 ---
 
-## License
+# License
 
-This project is open-source and available under the MIT License.
+This project was developed for academic purposes.
