@@ -1,31 +1,26 @@
-Inventory Optimizer API
-Overview
+# Inventory Optimizer API
 
-Inventory Optimizer is a Flask-based REST API designed to help businesses forecast product demand and optimize inventory levels using machine learning.
+A Flask-based REST API that predicts product demand using machine learning to help businesses optimize inventory levels.
 
-The system uses a Random Forest Regression model trained on historical sales data to predict future demand. It also includes authentication, logging, and a SQLite database for data storage.
+The system uses a **Random Forest Regression model** trained on historical sales data to forecast future demand and support inventory decision-making.
 
-This API can be integrated with web dashboards, ERP systems, or inventory management tools.
+---
 
-Features
+## Features
 
-Demand prediction using Random Forest Regressor
+- Machine learning demand forecasting using **Random Forest Regressor**
+- REST API built with **Flask**
+- User authentication using **Flask-Login**
+- **SQLite database** for data storage
+- API activity logging
+- Swagger UI for API documentation
+- Data processing with **Pandas** and **NumPy**
 
-REST API built with Flask
+---
 
-User authentication using Flask-Login
+## Project Structure
 
-SQLite database for storing data
-
-Logging for monitoring API activity
-
-Swagger UI support for API documentation
-
-Model training and prediction pipeline
-
-Data preprocessing using Pandas and NumPy
-
-Project Structure
+```
 InventoryOptimizer/
 │
 └── python_api/
@@ -35,140 +30,178 @@ InventoryOptimizer/
     ├── requirements.txt    # Python dependencies
     ├── app.log             # Application logs
     │
-    └── venv/               # Virtual environment (should not be committed)
-Technologies Used
+    └── venv/               # Virtual environment (not recommended to commit)
+```
 
-Python
+---
 
-Flask
+## Technologies Used
 
-Pandas
+- Python
+- Flask
+- Pandas
+- NumPy
+- Scikit-learn
+- SciPy
+- SQLite
+- Joblib
+- Flask-Login
+- Swagger UI
 
-NumPy
+---
 
-Scikit-learn
+## Installation
 
-SciPy
+### 1. Clone the repository
 
-SQLite
-
-Joblib
-
-Flask-Login
-
-Swagger UI
-
-Installation
-1. Clone the repository
+```bash
 git clone https://github.com/yourusername/inventory-optimizer.git
 cd inventory-optimizer/python_api
-2. Create a virtual environment
+```
+
+### 2. Create a virtual environment
+
+```bash
 python -m venv venv
+```
 
-Activate the environment:
+Activate the environment.
 
-Windows
+**Windows**
 
+```bash
 venv\Scripts\activate
+```
 
-Linux / Mac
+**Mac / Linux**
 
+```bash
 source venv/bin/activate
-3. Install dependencies
+```
+
+---
+
+### 3. Install dependencies
+
+```bash
 pip install -r requirements.txt
-Running the Application
+```
 
-Start the Flask API:
+---
 
+## Running the Application
+
+Start the Flask API server.
+
+```bash
 python app.py
+```
 
-The API will start on:
+The API will run on:
 
+```
 http://localhost:5000
-API Documentation
+```
+
+---
+
+## API Documentation
 
 Swagger UI can be accessed at:
 
+```
 http://localhost:5000/swagger
+```
 
-This interface allows you to explore and test API endpoints interactively.
+This interface allows you to test and explore the API endpoints.
 
-Machine Learning Model
+---
 
-The project uses:
+## Machine Learning Model
 
-RandomForestRegressor (Scikit-learn)
+The system uses **RandomForestRegressor from Scikit-learn**.
 
-Steps involved in the ML pipeline:
+### Workflow
 
-Load historical sales data
+1. Load historical sales data
+2. Data preprocessing using Pandas
+3. Feature engineering
+4. Train Random Forest model
+5. Evaluate model performance
+6. Save model using Joblib
+7. Generate demand predictions
 
-Data preprocessing using Pandas
+---
 
-Feature engineering
+## Example Use Case
 
-Model training
+1. User logs into the system.
+2. Historical sales or inventory data is uploaded.
+3. The system trains the machine learning model.
+4. Future demand predictions are generated.
+5. Results are returned through the API.
 
-Model evaluation (MAE, MSE)
+---
 
-Save trained model using Joblib
+## Logging
 
-Generate demand predictions
+Application logs are stored in:
 
-Example Workflow
-
-User logs into the system.
-
-Historical inventory data is uploaded.
-
-The system trains the ML model.
-
-The API predicts future demand.
-
-Results are returned via JSON.
-
-Logging
-
-Application logs are saved to:
-
+```
 app.log
+```
 
 Logs include:
 
-API requests
+- API requests
+- Errors
+- System activity
 
-Errors
+---
 
-Model activity
+## Security
 
-Security
+The API includes basic security features:
 
-The API uses:
+- Password hashing using **Werkzeug**
+- Session-based authentication
+- Protected API routes
 
-Password hashing using Werkzeug
+---
 
-Session-based authentication
+## Dependencies
 
-Login protection for secured routes
+Key libraries used in this project:
 
-Dependencies
-
-Key libraries used:
-
-Flask
-
-Pandas
-
-NumPy
-
-Scikit-learn
-
-SciPy
-
-Joblib
-
-Matplotlib
+- Flask
+- Pandas
+- NumPy
+- Scikit-learn
+- SciPy
+- Joblib
+- Matplotlib
 
 All dependencies are listed in:
 
+```
 requirements.txt
+```
+
+---
+
+## Future Improvements
+
+Potential improvements for this project:
+
+- Add deep learning forecasting models
+- Create a web dashboard for visualization
+- Integrate cloud databases
+- Implement role-based access control
+- Dockerize the application
+- Deploy to cloud platforms
+
+---
+
+## License
+
+This project is open-source and available under the MIT License.
