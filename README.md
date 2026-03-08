@@ -1,69 +1,174 @@
-# Inventory Dashboard
+Inventory Optimizer API
+Overview
 
-A Java-based desktop application that helps manage and visualize inventory data.
-The dashboard connects to an API, retrieves inventory information, and presents it in an easy-to-understand interface.
+Inventory Optimizer is a Flask-based REST API designed to help businesses forecast product demand and optimize inventory levels using machine learning.
 
-## Features
+The system uses a Random Forest Regression model trained on historical sales data to predict future demand. It also includes authentication, logging, and a SQLite database for data storage.
 
-* Retrieve inventory data from an API
-* Display inventory information in a dashboard interface
-* JSON data parsing using `org.json`
-* Modular structure with API client and UI components
+This API can be integrated with web dashboards, ERP systems, or inventory management tools.
 
-## Project Structure
+Features
 
-```
-InventoryDashboard
+Demand prediction using Random Forest Regressor
+
+REST API built with Flask
+
+User authentication using Flask-Login
+
+SQLite database for storing data
+
+Logging for monitoring API activity
+
+Swagger UI support for API documentation
+
+Model training and prediction pipeline
+
+Data preprocessing using Pandas and NumPy
+
+Project Structure
+InventoryOptimizer/
 │
-├── src
-│   └── client
-│       ├── ApiClient.java
-│       └── InventoryDashboard.java
-│
-├── lib
-│   └── json.jar
-│
-├── .gitignore
-├── .classpath
-└── .project
-```
+└── python_api/
+    │
+    ├── app.py              # Main Flask API application
+    ├── model.py            # Machine learning model logic
+    ├── requirements.txt    # Python dependencies
+    ├── app.log             # Application logs
+    │
+    └── venv/               # Virtual environment (should not be committed)
+Technologies Used
 
-## Technologies Used
+Python
 
-* Java
-* JSON (`org.json` library)
-* REST API integration
-* Object-Oriented Programming
+Flask
 
-## Setup Instructions
+Pandas
 
-1. Clone the repository:
+NumPy
 
-```
-git clone https://github.com/YOUR_USERNAME/InventoryDashboard.git
-```
+Scikit-learn
 
-2. Open the project in your preferred Java IDE (Eclipse / IntelliJ / VS Code).
+SciPy
 
-3. Make sure the JSON library is added to the project classpath.
+SQLite
 
-4. Run:
+Joblib
 
-```
-InventoryDashboard.java
-```
+Flask-Login
 
-## Example Use Case
+Swagger UI
 
-The application can be used by businesses or developers who want a simple way to monitor inventory levels and retrieve data from an external API.
+Installation
+1. Clone the repository
+git clone https://github.com/yourusername/inventory-optimizer.git
+cd inventory-optimizer/python_api
+2. Create a virtual environment
+python -m venv venv
 
-## Future Improvements
+Activate the environment:
 
-* Add graphical charts for inventory analytics
-* Integrate database storage
-* Improve UI with JavaFX or Swing enhancements
-* Add authentication for API access
+Windows
 
-## Author
+venv\Scripts\activate
 
-Bhanu Teja Garlapati
+Linux / Mac
+
+source venv/bin/activate
+3. Install dependencies
+pip install -r requirements.txt
+Running the Application
+
+Start the Flask API:
+
+python app.py
+
+The API will start on:
+
+http://localhost:5000
+API Documentation
+
+Swagger UI can be accessed at:
+
+http://localhost:5000/swagger
+
+This interface allows you to explore and test API endpoints interactively.
+
+Machine Learning Model
+
+The project uses:
+
+RandomForestRegressor (Scikit-learn)
+
+Steps involved in the ML pipeline:
+
+Load historical sales data
+
+Data preprocessing using Pandas
+
+Feature engineering
+
+Model training
+
+Model evaluation (MAE, MSE)
+
+Save trained model using Joblib
+
+Generate demand predictions
+
+Example Workflow
+
+User logs into the system.
+
+Historical inventory data is uploaded.
+
+The system trains the ML model.
+
+The API predicts future demand.
+
+Results are returned via JSON.
+
+Logging
+
+Application logs are saved to:
+
+app.log
+
+Logs include:
+
+API requests
+
+Errors
+
+Model activity
+
+Security
+
+The API uses:
+
+Password hashing using Werkzeug
+
+Session-based authentication
+
+Login protection for secured routes
+
+Dependencies
+
+Key libraries used:
+
+Flask
+
+Pandas
+
+NumPy
+
+Scikit-learn
+
+SciPy
+
+Joblib
+
+Matplotlib
+
+All dependencies are listed in:
+
+requirements.txt
